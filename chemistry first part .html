@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Under Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --accent:#ffb454; /* warm yellow */
+      --muted:#95a0b6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,var(--bg) 0%, #09101a 100%);color:#e6eef8;display:grid;place-items:center;padding:32px}
+
+    .wrap{max-width:980px;width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;padding:36px;display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+
+    .left h1{font-size:34px;margin:0 0 8px 0;color:white}
+    .left p{margin:0 0 20px;color:var(--muted);line-height:1.5}
+
+    .features{display:flex;gap:12px;flex-wrap:wrap}
+    .chip{background:rgba(255,255,255,0.03);padding:10px 12px;border-radius:999px;font-weight:600;color:var(--muted);font-size:14px}
+
+    .count{display:flex;gap:10px;margin-top:18px}
+    .count .box{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px 16px;border-radius:10px;text-align:center;min-width:68px}
+    .count .num{font-size:20px;font-weight:700;color:white}
+    .count .label{font-size:11px;color:var(--muted);margin-top:6px}
+
+    .right{display:flex;flex-direction:column;align-items:center;gap:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;width:100%;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .illustration{height:220px;display:grid;place-items:center}
+
+    /* simple animated construction icon */
+    .gear{width:110px;height:110px;border-radius:50%;background:linear-gradient(180deg,#111827,#0b1220);display:grid;place-items:center;position:relative}
+    .gear:before{content:'';position:absolute;inset:10%;border-radius:50%;background:conic-gradient(from 90deg,var(--accent),transparent 60%);filter:blur(6px);opacity:0.12}
+    .cog{width:68px;height:68px;border-radius:50%;background:linear-gradient(180deg,#0f1724,#172033);display:grid;place-items:center;border:6px solid rgba(255,255,255,0.06);position:relative}
+    .cog svg{transform-origin:center;animation:spin 6s linear infinite}
+    @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+    .actions{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn.primary{background:var(--accent);color:#08121a}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    footer.note{grid-column:1/-1;margin-top:14px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .wrap{grid-template-columns:1fr; padding:22px}
+      .illustration{height:160px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <div class="left">
+      <h1>Website Under Construction</h1>
+      <p>Amra ektu improve korchi — notun design, bhalo performance, aar onek feature esheche. Choto ekto maintenance cholche. Phire asbo taratari!</p>
+
+      <div class="features" aria-hidden>
+        <div class="chip">Responsive Design</div>
+        <div class="chip">Faster Loading</div>
+        <div class="chip">New Content</div>
+        <div class="chip">Secure Connection</div>
+      </div>
+
+      <div class="count" aria-label="Countdown to launch">
+        <div class="box"><div class="num" id="days">--</div><div class="label">Days</div></div>
+        <div class="box"><div class="num" id="hours">--</div><div class="label">Hours</div></div>
+        <div class="box"><div class="num" id="minutes">--</div><div class="label">Minutes</div></div>
+        <div class="box"><div class="num" id="seconds">--</div><div class="label">Seconds</div></div>
+      </div>
+
+      <div style="margin-top:18px" class="actions">
+        <button class="btn primary" id="notifyBtn">Notify Me</button>
+        <button class="btn ghost" onclick="location.href='#contact'">Contact</button>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="card illustration" aria-hidden>
+        <div class="gear" title="Under construction">
+          <div class="cog" aria-hidden>
+            <!-- simple gear SVG -->
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06A2 2 0 0 1 2.3 18.9l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82L4.3 7.7A2 2 0 1 1 7.13 4.87l.06.06a1.65 1.65 0 0 0 1.82.33h.09A1.65 1.65 0 0 0 11.6 4.4V4a2 2 0 1 1 4 0v.09c.14.35.38.66.7.92h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06A2 2 0 1 1 19.4 7.13l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09c.27.6.27 1.28 0 1.88z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="contact">
+        <strong style="display:block;margin-bottom:6px">Contact</strong>
+        <p style="margin:0 0 10px;color:var(--muted)">Jodi apni update pete chan, amader email e janan ba nichher form bhoron korun.</p>
+        <form id="notifyForm" onsubmit="subscribe(event)">
+          <input type="email" id="email" placeholder="Your email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:10px">
+          <div style="display:flex;gap:8px">
+            <button class="btn primary" type="submit">Subscribe</button>
+            <button class="btn ghost" type="button" onclick="alert('Phone: +880-1234-567890')">Call</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="note">© "আপনার সাইটের নাম" — Under Construction. Designed with ❤️</footer>
+  </div>
+
+  <script>
+    // Set a sample future launch date (you can change this)
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 7); // default: 7 days from now
+
+    function updateCountdown(){
+      const now = new Date();
+      const diff = launchDate - now;
+      if(diff <= 0){
+        document.getElementById('days').textContent = '0';
+        document.getElementById('hours').textContent = '0';
+        document.getElementById('minutes').textContent = '0';
+        document.getElementById('seconds').textContent = '0';
+        clearInterval(timer);
+        return;
+      }
+      const s = Math.floor(diff/1000)%60;
+      const m = Math.floor(diff/1000/60)%60;
+      const h = Math.floor(diff/1000/3600)%24;
+      const d = Math.floor(diff/1000/3600/24);
+      document.getElementById('days').textContent = d;
+      document.getElementById('hours').textContent = h;
+      document.getElementById('minutes').textContent = m;
+      document.getElementById('seconds').textContent = s;
+    }
+    updateCountdown();
+    const timer = setInterval(updateCountdown,1000);
+
+    // simple subscribe mock
+    function subscribe(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      if(!email) return;
+      // show a quick success message — in real site, send to server
+      alert('Dhonnobad! Amra apnake update korbo — ' + email);
+      document.getElementById('email').value = '';
+    }
+
+    document.getElementById('notifyBtn').addEventListener('click', ()=>{
+      document.getElementById('email').focus();
+    });
+  </script>
+</body>
+</html>
