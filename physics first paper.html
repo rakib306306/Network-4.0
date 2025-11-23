@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Dashboard</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#dfe7ff,#f3f7ff,#e6f0ff);
+  padding: 40px 20px;
+}
+
+/* Grid layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Video box */
+.video-box {
+  border-radius: 20px;
+  padding: 20px 10px;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+/* Hover effect */
+.video-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+}
+
+/* Video title */
+.video-box h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+/* Thumbnail */
+.video-box img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+/* Subject colors */
+.math-first { background: linear-gradient(135deg,#4a68ff,#6a8bff); }
+.math-second { background: linear-gradient(135deg,#ff6b6b,#ff8e8e); }
+.physics { background: linear-gradient(135deg,#f7c948,#ffe27a); color:#222; }
+.chemistry { background: linear-gradient(135deg,#7ae582,#45c961); }
+.biology { background: linear-gradient(135deg,#4dabf7,#1c7ed6); }
+.english { background: linear-gradient(135deg,#9d4edd,#7b2cbf); }
+.iq { background: linear-gradient(135deg,#ff9f1c,#ff6b6b); }
+
+/* Remove underline on link */
+.video-box a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Math First Paper -->
+  <div class="video-box math-first">
+    <h3>ম্যাট্রিক্স ও নির্ণায়ক</h3>
+    <a href="#" target="_blank">
+      <img src="https://via.placeholder.com/280x160.png?text=Math+First" alt="Math First Paper">
+    </a>
+  </div>
+
+  <!-- Math Second Paper -->
+  <div class="video-box math-second">
+    <h3>সরলরেখা</h3>
+    <a href="#" target="_blank">
+      <img src="https://via.placeholder.com/280x160.png?text=Math+Second" alt="Math Second Paper">
+    </a>
+  </div>
+
+  <!-- Physics Paper -->
+  <div class="video-box physics">
+    <h3>বৃত্ত</h3>
+    <a href="#" target="_blank">
+      <img src="https://via.placeholder.com/280x160.png?text=Physics" alt="Physics Paper">
+    </a>
+  </div>
+
+  <!-- Chemistry Paper -->
+  <div class="video-box chemistry">
+    <h3>ত্রিকোণমিতি</h3>
+    <a href="#" target="_blank">
+      <img src="https://via.placeholder.com/280x160.png?text=Chemistry" alt="Chemistry Paper">
+    </a>
+  </div>
+
+  <!-- Biology Paper -->
+  <div class="video-box biology">
+    <h3>অন্তরীকরণ</h3>
+    <a href="#" target="_blank">
+      <img src="https://via.placeholder.com/280x160.png?text=Biology" alt="Biology Paper">
+    </a>
+  </div>
+
+  <!-- English Paper -->
+  <div class="video-box english">
+    <h3>যোগোজীকরণ</h3>
+    <a href="#" target="_blank">
+      <img src="https://via.placeholder.com/280x160.png?text=English" alt="English Paper">
+    </a>
+  </div>
+
+  <!-- IQ Practice -->
+  <div class="video-box iq">
+    <h3>অন্তরীকরণ (Extra)</h3>
+    <a href="#" target="_blank">
+      <img src="https://via.placeholder.com/280x160.png?text=IQ+Practice" alt="IQ Practice">
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+s

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Dashboard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg,#dfe7ff,#f3f7ff,#e6f0ff);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ------- TOP BAR ------- */
+    .topbar {
+      width: 100%;
+      padding: 20px 0;
+      background: linear-gradient(90deg, #4a68ff, #6a8bff);
+      color: white;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      letter-spacing: 1px;
+    }
+
+    /* ------- MAIN GRID ------- */
+    .container {
+      width: 92%;
+      max-width: 1300px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 35px;
+    }
+
+    /* ------- BOXES ------- */
+    .box {
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 20px;
+      font-size: 26px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.35s ease;
+      color: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      display: block; /* <a> এর জন্য */
+      text-decoration: none; /* লিংকের আন্ডারলাইন উঠানোর জন্য */
+    }
+
+    .box small {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .box:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    }
+
+    /* ------- COLORS FOR EACH SUBJECT ------- */
+    .math { background: linear-gradient(135deg,#ff6b6b,#ff8e8e); }
+    .physics { background: linear-gradient(135deg,#f7c948,#ffe27a); color:#222; }
+    .chemistry { background: linear-gradient(135deg,#7ae582,#45c961); }
+    .biology { background: linear-gradient(135deg,#4dabf7,#1c7ed6); }
+    .english { background: linear-gradient(135deg,#9d4edd,#7b2cbf); }
+    .iq { background: linear-gradient(135deg,#ff9f1c,#ff6b6b); }
+    .exam { background: linear-gradient(135deg,#00c6ff,#0072ff); }
+
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">📘Network 4.0 </div>
+
+  <!-- MAIN GRID -->
+  <div class="container">
+    <a href="math.html" class="box math">
+      Mathematics
+      <small>Click to open</small>
+    </a> 
+
+    <a href="physics.html" class="box physics">
+      Physics
+      <small>Click to open</small>
+    </a>
+
+    <a href="chemistry.html" class="box chemistry">
+      Chemistry
+      <small>Click to open</small>
+    </a>
+
+    <a href="biology.html" class="box biology">
+      Biology
+      <small>Click to open</small>
+    </a>
+
+    <a href="english.html" class="box english">
+      English
+      <small>Click to open</small>
+    </a>
+
+    <a href="iq.html" class="box iq">
+      IQ
+      <small>Practice & Tests</small>
+    </a>
+
+    <a href="exam.html" class="box exam" style="grid-column: span 3;">
+      Exam
+      <small>All Subjects Test</small>
+    </a>
+  </div>
+
+</body>
+</html>

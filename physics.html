@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathematics Papers</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg,#dfe7ff,#f3f7ff,#e6f0ff);
+    }
+
+    /* Top Bar */
+    .topbar {
+      width: 100%;
+      padding: 20px 0;
+      background: linear-gradient(90deg, #4a68ff, #6a8bff);
+      color: white;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      letter-spacing: 1px;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: 1fr; /* পুরো width */
+      gap: 30px;
+    }
+
+    /* Boxes */
+    .box {
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: 600;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.35s ease;
+      color: white;
+      text-decoration: none;
+      display: block;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    }
+
+    /* Colors */
+    .first-paper { background: linear-gradient(135deg,#ff6b6b,#ff8e8e); }
+    .second-paper { background: linear-gradient(135deg,#f7c948,#ffe27a); color: #222; }
+
+    .box small {
+      display: block;
+      margin-top: 8px;
+      font-size: 16px;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="topbar">Physics</div>
+
+  <div class="container">
+    <a href="physics first paper.html" class="box first-paper">
+      Physics First Paper
+      <small>Click to open</small>
+    </a>
+
+    <a href="physics second paper.html" class="box second-paper">
+      Physics Second Paper
+      <small>Click to open</small>
+    </a>
+  </div>
+
+</body>
+</html>
